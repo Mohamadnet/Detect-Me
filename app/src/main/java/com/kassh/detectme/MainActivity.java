@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
                 new Runnable() {
                     @Override
                     public void run() {
-                        Intent intent = new Intent(MainActivity.this, secondActivity.class);
+                        Intent intent = new Intent(MainActivity.this, Login.class);
                         startActivity(intent);
                         finish();
                     }
