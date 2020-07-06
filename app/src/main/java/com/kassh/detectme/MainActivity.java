@@ -1,5 +1,6 @@
 package com.kassh.detectme;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -10,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.os.Handler;
+import android.util.Pair;
 import android.view.View;
 
 import android.view.Menu;
@@ -51,8 +53,12 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         Intent intent = new Intent(MainActivity.this, Login.class);
-                        startActivity(intent);
-                        finish();
+                        Pair[] pairs = new Pair[2];
+                        pairs[0] = new Pair<View, String>(topLogo, "logo_image");
+                        pairs[1] = new Pair<View, String>(middleText, "logo_text");
+
+                        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(MainActivity.this, pairs);
+                        startActivity(intent, options.toBundle());
                     }
                 }, SPLASH_TIME_OUT);
     }

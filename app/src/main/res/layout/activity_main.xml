@@ -17,6 +17,7 @@
             android:layout_marginTop="150dp"
             android:background="@drawable/top_line"
             android:layout_centerHorizontal="true"
+            android:transitionName="logo_image"
             />
 
     </RelativeLayout>
@@ -33,7 +34,8 @@
             android:fontFamily="@font/baloo"
             android:text="Detect Me"
             android:textColor="#fff"
-            android:textSize="70sp" />
+            android:textSize="70sp"
+            android:transitionName="logo_text"/>
     </RelativeLayout>
     <LinearLayout
         android:layout_width="match_parent"
