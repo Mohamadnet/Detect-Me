@@ -43,8 +43,8 @@ public class Login extends AppCompatActivity {
                 Intent intent = new Intent(Login.this, SignUp.class);
                 Pair[] pairs = new Pair[7];
                 pairs[0] = new Pair<View, String>(image, "logo_image");
-                pairs[1] = new Pair<View, String>(logoText, "logo_text");
-                pairs[2] = new Pair<View, String>(sloganText, "logo_desc");
+                pairs[1] = new Pair<View, String>(logoText, "logo_desc");
+                pairs[2] = new Pair<View, String>(sloganText, "logo_text");
                 pairs[3] = new Pair<View, String>(username, "username_tran");
                 pairs[4] = new Pair<View, String>(password, "password_tran");
                 pairs[5] = new Pair<View, String>(login_btn, "button_tran");
